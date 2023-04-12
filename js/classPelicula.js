@@ -1,4 +1,4 @@
-class Pelicula{
+export default class Pelicula{
     #codigo;
     #titulo;
     #descripcion;
@@ -9,7 +9,7 @@ class Pelicula{
     #pais;
     #reparto;
     #estado;
-    
+
     constructor(titulo, descripcion, imagen, genero, anio, duracion, pais, reparto){
         this.#codigo =0;
         this.#titulo = titulo;
