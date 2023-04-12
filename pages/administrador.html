@@ -54,12 +54,9 @@
         <h2 class="display-5 text-center">Administrador de Películas</h2>
         <hr>
         <section class="row d-flex mt-4">
-            <div class="d-flex mb-3">
-                <p class="mb-0 mt-2">Opciones: </p>
-                <button type="button" class="btn btn-link btn-sm ms-2" data-bs-toggle="modal"
-                    data-bs-target="#ventanaModal">
-                    <i class="bi bi-plus-square fs-4"></i>
-                </button>
+            <div class="mb-3">
+                <p class="mb-0 mt-2">Opciones: <button type="button" id="btnAgregar" class="btn btn-link btn-sm ms-2"><i
+                            class="bi bi-plus-square fs-4"></i></button></p>
             </div>
             <hr>
             <article>
@@ -68,111 +65,139 @@
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
-                          <tr>
-                          <th>#</th>
-                          <th>Nombre</th>
-                          <th>Descripcion</th>
-                          <th>Imagen</th>
-                          <th>Genero</th>
-                          <th>Acciones</th>
-                        </tr>
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Descripcion</th>
+                                <th>Imagen</th>
+                                <th>Genero</th>
+                                <th>Acciones</th>
+                            </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th>1</th>
-                            <td>The Super Mario Bros Movie</td>
-                            <td class="text-truncate">Pelicula de animación basada en la franquicia de videojuegos Super Mario Bros, de Nintendo. Está producida por Shigeru Miyamoto, creador de la licencia, y la producirá y animará Illumination Entertainment</td>
-                            <td class="text-truncate">https://pics.filmaffinity.com/the_super_mario_bros_movie-521125124-large.jpg</td>
-                            <td>Aventura</td>
-                            <td><button class="bi bi-pencil-square btn btn-warning" id="btnEditar"></button> <button class="bi bi-x-square btn btn-danger"></button></td>
-                          </tr>
-                          <tr>
-                            <th>2</th>
-                            <td>AIR</td>
-                            <td class="text-truncate">Narra la increíble y revolucionaria asociación entre Michael Jordan -un novato en ese momento- y la incipiente sección de baloncesto de Nike que revolucionó el mundo del deporte y la cultura contemporánea con la marca Air Jordan. Cuenta la atrevida apuesta que definió la carrera de un equipo poco convencional, la visión implacable de una madre que conoce el valor del inmenso talento de su hijo y el fenómeno del baloncesto que se convertiría en el más grande de todos los tiempos.</td>
-                            <td class="text-truncate">https://pics.filmaffinity.com/air-500673673-large.jpg</td>
-                            <td>Drama | Biográfico</td>
-                            <td><button class="bi bi-pencil-square btn btn-warning"></button> <button class="bi bi-x-square btn btn-danger"></button></td>
-                          </tr>
-                          <tr>
-                            <th>3</th>
-                            <td>The Pope's Exorcist</td>
-                            <td class="text-truncate">Película sobre Gabriele Amorth, un sacerdote que ejerció como exorcista principal del Vaticano, realizando más de cien mil exorcismos a lo largo de su vida. Amorth escribió dos libros de memorias donde detalló sus experiencias luchando contra Satanás.</td>
-                            <td class="text-truncate">https://pics.filmaffinity.com/the_pope_s_exorcist-660382735-large.jpg</td>
-                            <td>Terror</td>
-                            <td><button class="bi bi-pencil-square btn btn-warning"></button> <button class="bi bi-x-square btn btn-danger"></button></td>
-                          </tr>
-                          <tr>
-                            <th>4</th>
-                            <td>John Wick: Chapter 4</td>
-                            <td class="text-truncate">John Wick, legendario asesino retirado, vuelve de nuevo a la acción impulsado por una incontrolable búsqueda de venganza. Al tener que luchar contra asesinos sedientos de sangre que le persiguen, John tendrá que llevar sus habilidades al límite si quiere salir esta vez con vida.</td>
-                            <td class="text-truncate">https://pics.filmaffinity.com/john_wick_chapter_4-101402041-large.jpg</td>
-                            <td>Accion</td>
-                            <td><button class="bi bi-pencil-square btn btn-warning"></button> <button class="bi bi-x-square btn btn-danger"></button></td>
-                          </tr>
+                            <tr>
+                                <th>1</th>
+                                <td>The Super Mario Bros Movie</td>
+                                <td class="text-truncate">Pelicula de animación basada en la franquicia de videojuegos
+                                    Super Mario Bros, de Nintendo. Está producida por Shigeru Miyamoto, creador de la
+                                    licencia, y la producirá y animará Illumination Entertainment</td>
+                                <td class="text-truncate">
+                                    https://pics.filmaffinity.com/the_super_mario_bros_movie-521125124-large.jpg</td>
+                                <td>Aventura</td>
+                                <td><button class="bi bi-pencil-square btn btn-warning" id="btnEditar"></button> <button
+                                        class="bi bi-x-square btn btn-danger"></button></td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>AIR</td>
+                                <td class="text-truncate">Narra la increíble y revolucionaria asociación entre Michael
+                                    Jordan -un novato en ese momento- y la incipiente sección de baloncesto de Nike que
+                                    revolucionó el mundo del deporte y la cultura contemporánea con la marca Air Jordan.
+                                    Cuenta la atrevida apuesta que definió la carrera de un equipo poco convencional, la
+                                    visión implacable de una madre que conoce el valor del inmenso talento de su hijo y
+                                    el fenómeno del baloncesto que se convertiría en el más grande de todos los tiempos.
+                                </td>
+                                <td class="text-truncate">https://pics.filmaffinity.com/air-500673673-large.jpg</td>
+                                <td>Drama | Biográfico</td>
+                                <td><button class="bi bi-pencil-square btn btn-warning"></button> <button
+                                        class="bi bi-x-square btn btn-danger"></button></td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>The Pope's Exorcist</td>
+                                <td class="text-truncate">Película sobre Gabriele Amorth, un sacerdote que ejerció como
+                                    exorcista principal del Vaticano, realizando más de cien mil exorcismos a lo largo
+                                    de su vida. Amorth escribió dos libros de memorias donde detalló sus experiencias
+                                    luchando contra Satanás.</td>
+                                <td class="text-truncate">
+                                    https://pics.filmaffinity.com/the_pope_s_exorcist-660382735-large.jpg</td>
+                                <td>Terror</td>
+                                <td><button class="bi bi-pencil-square btn btn-warning"></button> <button
+                                        class="bi bi-x-square btn btn-danger"></button></td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>John Wick: Chapter 4</td>
+                                <td class="text-truncate">John Wick, legendario asesino retirado, vuelve de nuevo a la
+                                    acción impulsado por una incontrolable búsqueda de venganza. Al tener que luchar
+                                    contra asesinos sedientos de sangre que le persiguen, John tendrá que llevar sus
+                                    habilidades al límite si quiere salir esta vez con vida.</td>
+                                <td class="text-truncate">
+                                    https://pics.filmaffinity.com/john_wick_chapter_4-101402041-large.jpg</td>
+                                <td>Accion</td>
+                                <td><button class="bi bi-pencil-square btn btn-warning"></button> <button
+                                        class="bi bi-x-square btn btn-danger"></button></td>
+                            </tr>
                         </tbody>
-                      </table>
+                    </table>
                 </div>
             </article>
         </section>
 
         <!-- Modal -->
-        <div class="modal fade" id="ventanaModal" tabindex="-1" aria-labelledby="ventanaModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="agregarModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="ventanaModalLabel">Administrar Serie</h1>
+                        <h1 class="modal-title fs-5" id="agregarModalLabel">Administrar Serie</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="mb-2">
-                            <fieldset disabled>
-                                <label for="inputCodigo" class="form-label mb-0">Código</label>
-                                <input type="text" class="form-control" id="inputCodigo" placeholder="123" required>
-                            </fieldset>
-                        </div>
-                        <div class="mb-2">
-                            <label for="inputTitulo" class="form-label mb-0">Título *</label>
-                            <input type="text" class="form-control" id="inputTitulo" placeholder="Ej: Robotech" required>
-                        </div>
-                        <div class="mb-2">
-                            <label for="inputDescripcion" class="form-label">Descripción *</label>
-                            <textarea type="text" class="form-control" id="inputDescripcion" placeholder="Ej:" rows="3"></textarea>
-                          </div>
-                        <div class="mb-2">
-                            <label for="inputImagen" class="form-label mb-0">Imágen *</label>
-                            <input type="text" class="form-control" id="inputImagen" placeholder="Ej: http://127.0.0.1:5500/pages/administrador.html" required>
-                        </div>
-                        <div class="mb-2">
-                            <label for="inputGeneracion" class="form-label mb-0">Generación *</label>
-                            <select class="form-select" aria-label="Default select example" required>
-                                <option selected>Seleccione una opción</option>
-                                <option value="1">Aventura</option>
-                                <option value="2">Accion</option>
-                                <option value="3">Drama</option>
-                                <option value="4">Terror</option>
-                              </select>
-                        </div>
-                        <div class="mb-2">
-                            <label for="inputAnio" class="form-label mb-0">Año</label>
-                            <input type="number" class="form-control" id="inputAnio" placeholder="Ej: 2023">
-                        </div>
-                        <div class="mb-2">
-                            <label for="inputDuracion" class="form-label mb-0">Duración (en minutos)</label>
-                            <input type="number" class="form-control" id="inputDuracion" placeholder="Ej: 93 min">
-                        </div>
-                        <div class="mb-2">
-                            <label for="inputPais" class="form-label mb-0">País</label>
-                            <input type="text" class="form-control" id="inputPais" placeholder="Ej: Argentina" >
-                        </div>
-                        <div class="mb-2">
-                            <label for="inputReparto" class="form-label mb-0">Reparto</label>
-                            <input type="text" class="form-control" id="inputReparto" placeholder="Ej: Chris Pratt, Anya Taylor-Joy, Charlie Day, Jack Black">
-                        </div>
+                        <form id="formAdministrarPelicula">
+                            <div class="mb-2">
+                                <fieldset disabled>
+                                    <label for="inputCodigo" class="form-label mb-0">Código</label>
+                                    <input type="text" class="form-control" id="inputCodigo" placeholder="123" required>
+                                </fieldset>
+                            </div>
+                            <div class="mb-2">
+                                <label for="inputTitulo" class="form-label mb-0">Título *</label>
+                                <input type="text" class="form-control" id="inputTitulo" placeholder="Ej: Robotech"
+                                    required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="inputDescripcion" class="form-label">Descripción *</label>
+                                <textarea type="text" class="form-control" id="inputDescripcion" placeholder="Ej:"
+                                    rows="3"></textarea>
+                            </div>
+                            <div class="mb-2">
+                                <label for="inputImagen" class="form-label mb-0">Imágen *</label>
+                                <input type="text" class="form-control" id="inputImagen"
+                                    placeholder="Ej: http://127.0.0.1:5500/pages/administrador.html" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="inputGeneracion" class="form-label mb-0">Generación *</label>
+                                <select class="form-select" aria-label="Default select example" required>
+                                    <option selected>Seleccione una opción</option>
+                                    <option value="1">Aventura</option>
+                                    <option value="2">Accion</option>
+                                    <option value="3">Drama</option>
+                                    <option value="4">Terror</option>
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label for="inputAnio" class="form-label mb-0">Año</label>
+                                <input type="number" class="form-control" id="inputAnio" placeholder="Ej: 2023">
+                            </div>
+                            <div class="mb-2">
+                                <label for="inputDuracion" class="form-label mb-0">Duración (en minutos)</label>
+                                <input type="number" class="form-control" id="inputDuracion" placeholder="Ej: 93 min">
+                            </div>
+                            <div class="mb-2">
+                                <label for="inputPais" class="form-label mb-0">País</label>
+                                <input type="text" class="form-control" id="inputPais" placeholder="Ej: Argentina">
+                            </div>
+                            <div class="mb-2">
+                                <label for="inputReparto" class="form-label mb-0">Reparto</label>
+                                <input type="text" class="form-control" id="inputReparto"
+                                    placeholder="Ej: Chris Pratt, Anya Taylor-Joy, Charlie Day, Jack Black">
+                            </div>
+                            <div class="justify-content-start">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Enviar</button>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -189,4 +214,3 @@
 </body>
 
 </html>
-
