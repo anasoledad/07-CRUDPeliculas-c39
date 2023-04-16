@@ -1,8 +1,24 @@
 import Pelicula from "./classPelicula.js";
+import { sumarioValidaciones } from "./helpers.js";
 
 const btnEditar = document.querySelector('#btnEditar');
 const btnAgregar = document.querySelector('#btnAgregar');
+const titulo = document.getElementById('titulo');
+const codigo = document.getElementById('codigo');
+const descripcion = document.getElementById('descripcion');
+const duracion = document.getElementById('duracion');
+const anio = document.getElementById('anio');
+const genero = document.getElementById('generp');
+const pais = document.getElementById('pais');
+const reparto = document.getElementById('reparto');
+const imagen = document.getElementById('imagen');
+const msjFormulario = document.getElementById('msjFormulario');
+
+
+
+
 const formularioPelicula = document.getElementById('formAdministrarPelicula');
+let listaPeliculas = [];
 
 btnEditar.addEventListener('click', crearPeli);
 btnAgregar.addEventListener('click', mostrarModalPeli);
@@ -25,7 +41,19 @@ function mostrarModalPeli(){
 
 function cargarPelicula(e){
     e.preventDefault();
-    console.log('creando la pelicula...')
-    //crear modal
-    modalPelicula.hide();
+    //validar los datos
+    let sumario = sumarioValidaciones(titulo.value, descripcion.value, imagen.value, duracion.value)
+    if(sumario.length === 0){
+        console.log('creando la pelicula...');
+        modalPelicula.hide();
+        //crear la película
+        //almacenar la peli en localstorage
+        //crear modal
+    }else{
+        msjFormulario.className = 'alert alert-danger mt-3';
+        msjFormulario.innerHTML = sumario;
+
+    }
+    
+    
 }

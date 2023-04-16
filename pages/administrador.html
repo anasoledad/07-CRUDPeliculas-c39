@@ -147,27 +147,33 @@
                             <div class="mb-2">
                                 <fieldset disabled>
                                     <label for="inputCodigo" class="form-label mb-0">Código</label>
-                                    <input type="text" class="form-control" id="inputCodigo" placeholder="123" required>
+                                    <input type="text" class="form-control" id="codigo" placeholder="123" required>
                                 </fieldset>
                             </div>
                             <div class="mb-2">
                                 <label for="inputTitulo" class="form-label mb-0">Título *</label>
-                                <input type="text" class="form-control" id="inputTitulo" placeholder="Ej: Robotech"
-                                    required minlength="1" maxlength="30">
+                                <!-- <input type="text" class="form-control" id="titulo" placeholder="Ej: Robotech"
+                                    required minlength="3" maxlength="30"> -->
+                                    <input type="text" class="form-control" id="titulo" placeholder="Ej: Robotech"
+                                    required>
                             </div>
                             <div class="mb-2">
                                 <label for="inputDescripcion" class="form-label">Descripción *</label>
-                                <textarea type="text" class="form-control" id="inputDescripcion" placeholder="Ej:"
-                                    rows="3" required minlength="1" maxlength="200"></textarea>
+                                <!-- <input type="text" class="form-control" id="descripcion" placeholder="Ej:"
+                                     rows="3" required minlength="3" maxlength="200"></input> -->
+                                     <input type="text" class="form-control" id="descripcion" placeholder="Ej:"
+                                     rows="3" required></input>
                             </div>
                             <div class="mb-2">
                                 <label for="inputImagen" class="form-label mb-0">Imágen *</label>
-                                <input type="text" class="form-control" id="inputImagen"
-                                    placeholder="Ej: http://127.0.0.1:5500/pages/administrador.html" required minlength="1" maxlength="100">
+                                <!-- <input type="text" class="form-control" id="imagen"
+                                    placeholder="Ej: http://127.0.0.1:5500/pages/administrador.html" required minlength="7" maxlength="200"> -->
+                                    <input type="text" class="form-control" id="imagen"
+                                    placeholder="Ej: http://127.0.0.1:5500/pages/administrador.html" required>
                             </div>
                             <div class="mb-2">
                                 <label for="inputGeneracion" class="form-label mb-0">Generación *</label>
-                                <select class="form-select" aria-label="Default select example" required>
+                                <select class="form-select" aria-label="Default select example" id="genero" required>
                                     <option selected>Seleccione una opción</option>
                                     <option value="1">Aventura</option>
                                     <option value="2">Accion</option>
@@ -177,23 +183,26 @@
                             </div>
                             <div class="mb-2">
                                 <label for="inputAnio" class="form-label mb-0">Año</label>
-                                <input type="number" class="form-control" id="inputAnio" placeholder="Ej: 2023" minlength="4" maxlength="4">
+                                <input type="number" class="form-control" id="anio" placeholder="Ej: 2023" minlength="4" maxlength="4">
                             </div>
                             <div class="mb-2">
                                 <label for="inputDuracion" class="form-label mb-0">Duración (en minutos)</label>
-                                <input type="number" class="form-control" id="inputDuracion" placeholder="Ej: 93 min" minlength="1" maxlength="3">
+                                <input type="text" class="form-control" id="duracion" placeholder="Ej: 93 min" minlength="1" maxlength="3">
                             </div>
                             <div class="mb-2">
                                 <label for="inputPais" class="form-label mb-0">País</label>
-                                <input type="text" class="form-control" id="inputPais" placeholder="Ej: Argentina" minlength="2" maxlength="30">
+                                <input type="text" class="form-control" id="pais" placeholder="Ej: Argentina" minlength="2" maxlength="30">
                             </div>
                             <div class="mb-2">
                                 <label for="inputReparto" class="form-label mb-0">Reparto</label>
-                                <input type="text" class="form-control" id="inputReparto"
+                                <input type="text" class="form-control" id="reparto"
                                     placeholder="Ej: Chris Pratt, Anya Taylor-Joy, Charlie Day, Jack Black" minlength="1" maxlength="200">
                             </div>
                             <div class="justify-content-start">
                                 <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                            <div class="alert alert-danger mt-3 d-none" role="alert" id="msjFormulario">
+                                
                             </div>
                         </form>
                     </div>
